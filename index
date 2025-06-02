@@ -353,7 +353,7 @@ nav a:hover {
       <div class="menu-section w-40">
         <div class="menu-row">
           <h3>책 자세히 알아보기</h3>
-          <a href="https://jiyun7711.github.io/book1/" class="split-btn">
+          <a href="책 소개" class="split-btn">
             <span class="left">책 소개</span>
             <span class="right">탐방다방에 대해</span>
           </a>
