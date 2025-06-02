@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>탐방다방 이민채 페이지</title>
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      margin: 0;
+    }
+    .font-lg { font-size: 36px; }
+    .font-md { font-size: 24px; }
+    .font-aa { font-size: 25px; }
+    .weight-extrabold { font-weight: 800; }
+    .weight-bold { font-weight: 700; }
+    .weight-medium { font-weight: 500; }
+    .line-140 { line-height: 1.3; }
+
+    .p-t-20 { padding-top: 0px; }
+    .p-b-50 { padding-bottom: 0px; }
+    .p-x-29 { padding-left: 29px; padding-right: 0px; }
+
+    .box1, .box4 {
+      width: 338px;
+      background-color: #f2f2f2;
+    }
+    .box1 {
+      height: 363.1px;
+      background-color: #ccc;
+    }
+    .box3, .box5 {
+      width: 338px;
+      height: 65.5px;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box4 {
+      width: 338px;
+      height: 35.2px;
+      background-color: #fff;
+    }
+    .box6 {
+      width: 338px;
+      height: 1260.7px;
+      background-color: #fff;
+      padding: 57px 26px 0px 62px;
+      box-sizing: border-box;
+      font-size: 23px;
+    }
+    .extralight {
+      font-weight: 200;
+      font-size: 23px;
+      line-height: 1.3;
+    }
+    .extrabold {
+      font-weight: 800;
+      line-height: 1.3;
+    }
+    .medium {
+      font-weight: 500;
+      font-size: 23px;
+      line-height: 1.5;
+    }
+    .inner-box {
+      width: 270px; 
+      padding: 21px 0px 15px 17px;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 76px;
+      font-size: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      color: #010101;
+      transition: background-color 0.2s;
+    }
+    .inner-box:hover {
+      background-color: #C9C9C9;
+    }
+    .inner-box.active {
+      background-color: #C9C9C9;
+    }
+    .circle {
+      width: 16px;
+      height: 16px;
+      background-color: #010101;
+      border-radius: 50%;
+    }
+    .box2 {
+      width: 1000px;
+      background-color: #fff;
+      display: flex;
+      align-items: flex-start;
+      padding-top: 70px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .text-wrap {
+      width: 330px;
+      margin-right: 36px;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+    .box2-image img {
+      max-width: 529px;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .box7 {
+      width: 1280px;
+      height: 209px;
+      background-color: #010101;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 30px;
+    }
+    .horizontal-container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .left-column {
+      display: flex;
+      flex-direction: column;
+    }
+    .short-line {
+      width: 86px;
+      height: 2px;
+      background-color: #010101;
+      margin: 48px 0 0 29px;
+    }
+    .long-line {
+      width: 824px;
+      height: 2px;
+      background-color: #010101;
+      margin: 91px 0 0 29px;
+    }
+    .line {
+      width: 88px;
+      height: 1.5px;
+      background-color: #010101;
+      margin: 8px 0px 10px 0px;
+    }
+    p {
+      margin: 0;
+    }
+    .ellipsis {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .font-md {
+      font-size: 24px;
+    }
+    .weight-medium {
+      font-weight: 500;
+    }
+    .line-140 {
+      line-height: 1.4;
+    }
+    .p-x-29 {
+      padding-left: 29px;
+      padding-right: 0px;
+    }
+    .list-row {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .list-row-group {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      justify-content: flex-start;
+    }
+    .list-col {
+      display: flex;
+      flex-direction: column;
+      min-width: 120px;
+    }
+    .city-title {
+      font-weight: bold;
+      font-size: 25px;
+      margin-bottom: 5px;
+      margin-top: 10px;
+    }
+.cafe-row {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  margin-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+.cafe-row span:first-child {
+  display: inline-block;
+  width: 120px; /* ← 여기를 원하는만큼 조정 */
+  text-align: left;
+  white-space: nowrap;
+}
+.cafe-row span:last-child {
+  display: inline-block;
+  width: 60px; /* ← 여기를 원하는만큼 조정 */
+  text-align: right;
+  white-space: nowrap;
+}
+    }
+    @media (max-width: 1100px) {
+      .box2 {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding-top: 30px;
+      }
+      .text-wrap, .box2-image img {
+        width: 90vw;
+        max-width: 500px;
+        margin-right: 0;
+      }
+      .list-row {
+        flex-direction: column;
+        gap: 0;
+        padding-left: 12px;
+      }
+      .list-row-group {
+        flex-direction: column;
+        gap: 0;
+      }
+      .list-col, .list-row-group {
+        min-width: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="horizontal-container">
+    <div class="left-column">
+      <div class="box1">
+        <img src="https://i.imgur.com/tqdO9RW.jpeg" alt="box1" width="338" height="363">
+      </div>
+      <div class="box3">
+        <a href="https://example.com" class="inner-box active">
+          <div class="circle"></div>
+          <span class="font-lg weight-extrabold">책 소개</span>
+        </a>
+      </div>
+      <div class="box4"></div>
+      <div class="box5">
+        <a href="https://example.com" class="inner-box">
+          <div class="circle"></div>
+          <span class="font-lg weight-extrabold">작가 소개</span>
+        </a>
+      </div>
+      <div class="box6">
+        <p class="extralight">
+          ‘탐방 다방’은<br>
+          2018년부터2024년까지<br>
+          전국의 다방 100여 곳을<br>
+          탐방하고 사진과 글로 기록한 책이다.<br><br>
+          방문한 다방들의<br>
+          건축물 사용 승인일은<br>
+          1960년대가 26퍼센트,<br>
+          70년대 31퍼센트,<br>
+          80년대 38퍼센트,<br>
+          90년대 이후가 5퍼센트로,<br>
+          대다수가 건물이 생길 <br>
+          때부터 다방이었던<br>
+          것으로 추정된다.<br><br>
+          다방 아카이빙 작업은<br>
+          한국 건축과 공간의<br>
+          지역성에 대한 관심에서<br> 
+          출발했다.<br>
+          1920년대에 시작된<br> 
+          다방의 역사는 이제<br> 
+          100년이 넘었다.<br>
+          기호 식품인 커피는 예나<br> 
+          지금이나 모던의 상징이며,<br> 
+          커피를 마시는 공간은<br>
+          시대의 유행과 디자인을<br> 
+          선도하는 문화적 중심지가<br> 
+          되어왔다.<br>
+          카페에 밀려났지만<br> 
+          다방은 여전히 전국<br> 
+          곳곳에서 운영되고 있다.<br>
+          다방을 한국의 문화를<br>
+          반영하고 축적한 중요한<br> 
+          공간으로 보고, 그 안에<br> 
+          스며든 디자인을 탐색하고자<br> 
+          했다.<br>
+        </p>
+      </div>
+    </div>
+
+    <div class="box2">
+      <div class="text-wrap">
+        <p class="font-lg weight-extrabold line-140 p-x-29 p-t-20">
+          탐방다방<br>
+          <span style="white-space: nowrap;">다방의 매혹과 디자인</span>
+        </p>
+        <p class="font-lg weight-medium line-140 p-x-29 p-b-50">2024년 11월 25일</p>
+        <div class="short-line"></div>
+        <p class="font-md weight-extrabold line-140 p-x-29" style="padding-top: 56px;">지은이</p>
+        <p class="font-md weight-medium line-140 p-x-29" style="padding-top: 25px;">홍윤주</p>
+        <p class="font-md weight-extrabold line-140 p-x-29" style="padding-top: 56px;">편집</p>
+        <p class="font-md weight-medium line-140 p-x-29" style="padding-top: 25px;">정은주</p>
+        <p class="font-md weight-extrabold line-140 p-x-29" style="padding-top: 56px;">북디자인</p>
+        <p class="font-md weight-medium line-140 p-x-29" style="padding-top: 25px;">신덕호</p>
+        <p class="font-md weight-extrabold line-140 p-x-29" style="padding-top: 56px;">디자인 도움</p>
+        <p class="font-md weight-medium line-140 p-x-29" style="padding-top: 25px;">김산</p>
+        <div class="long-line"></div>
+        <p class="font-lg weight-extrabold line-140 p-x-29 p-t-20" style="padding-top:31px;">목차</p>
+        <div class="list-row">
+          <div class="list-row-group">
+            <!-- 서울 -->
+            <div class="list-col">
+              <div class="city-title">서울</div>
+              <div class="line"></div>
+              <div class="cafe-row"><span>솔커피숍</span><span>44</span></div>
+              <div class="cafe-row"><span>애정다방</span><span>50</span></div>
+              <div class="cafe-row"><span>을지다방</span><span>56</span></div>
+              <div class="cafe-row"><span>응접실다방</span><span>62</span></div>
+              <div class="cafe-row"><span>지원다방</span><span>68</span></div>
+              <div class="cafe-row"><span>한아름커피숍</span><span>74</span></div>
+              <div class="cafe-row"><span>연진커피숍</span><span>80</span></div>
+              <div class="cafe-row"><span>금다방</span><span>86</span></div>
+              <div class="cafe-row"><span>청자다방</span><span>92</span></div>
+              <div class="cafe-row"><span>명다방</span><span>98</span></div>
+              <div class="cafe-row"><span>상진다방</span><span>104</span></div>
+            </div>
+            <!-- 인천 -->
+            <div class="list-col">
+              <div class="city-title">인천</div>
+              <div class="line"></div>
+              <div class="cafe-row"><span>경기다방</span><span>162</span></div>
+              <div class="cafe-row"><span>샘터다방</span><span>168</span></div>
+              <div class="cafe-row"><span>은실커피숍</span><span>174</span></div>
+              <div class="cafe-row"><span>선영다방</span><span>180</span></div>
+            </div>
+            <!-- 원주 -->
+            <div class="list-col">
+              <div class="city-title">원주</div>
+              <div class="line"></div>
+              <div class="cafe-row"><span>유리다방</span><span>186</span></div>
+              <div class="cafe-row"><span>쩐다방</span><span>192</span></div>
+            </div>
+          </div>
+          <!-- 2줄: 강릉, 대전, 공주, 전주, 군산 -->
+          <div class="list-row-group">
+                <!-- 인천 -->
+            <div class="list-col">
+              <div class="city-title">인천</div>
+              <div class="line"></div>
+              <div class="cafe-row"><span>경기다방</span><span>162</span></div>
+              <div class="cafe-row"><span>샘터다방</span><span>168</span></div>
+              <div class="cafe-row"><span>은실커피숍</span><span>174</span></div>
+              <div class="cafe-row"><span>선영다방</span><span>180</span></div>
+            </div>
+            <!-- 대전 -->
+            <div class="list-col">
+              <div class="city-title">대전</div>
+              <div class="line"></div>
+              <div class="cafe-row"><span>아름다방</span><span>210</span></div>
+              <div class="cafe-row"><span>석다방</span><span>216</span></div>
+              <div class="cafe-row"><span>연지다방</span><span>222</span></div>
+            </div>
+            <!-- 공주 -->
+            <div class="list-col">
+              <div class="city-title">공주</div>
+              <div class="line"></div>
+              <div class="cafe-row"><span>거봉다실</span><span>228</span></div>
+              <div class="cafe-row"><span>미도다실</span><span>234</span></div>
+            </div>
+            <!-- 전주 -->
+            <div class="list-col">
+              <div class="city-title">전주</div>
+              <div class="line"></div>
+              <div class="cafe-row"><span>백년커피방</span><span>280</span></div>
+              <div class="cafe-row"><span>연화다방</span><span>286</span></div>
+              <div class="cafe-row"><span>민속다방</span><span>292</span></div>
+            </div>
+            <!-- 군산 -->
+            <div class="list-col">
+              <div class="city-title">군산</div>
+              <div class="line"></div>
+              <div class="cafe-row"><span>모두다방</span><span>298</span></div>
+              <div class="cafe-row"><span>학다방</span><span>304</span></div>
+              <div class="cafe-row"><span>향다방</span><span>310</span></div>
+            </div>
+          </div>
+          <!-- 3줄: 광주, 목포, 부산, 대구 -->
+          <div class="list-row-group">
+            <!-- 광주 -->
+            <div class="list-col">
+              <div class="city-title">광주</div>
+              <div class="line"></div>
+              <div class="cafe-row"><span>화신다방</span><span>186</span></div>
+              <div class="cafe-row"><span>동신다방</span><span>192</span></div>
+              <div class="cafe-row"><span>도원다방</span></div>
+            </div>
+            <!-- 목포 -->
+            <div class="list-col">
+              <div class="city-title">목포</div>
+              <div class="line"></div>
+              <div class="cafe-row"><span>유달다방</span><span>334</span></div>
+              <div class="cafe-row"><span>진고개다방</span><span>340</span></div>
+              <div class="cafe-row"><span>삼호다방</span><span>346</span></div>
+            </div>
+            <!-- 부산 -->
+            <div class="list-col">
+              <div class="city-title">부산</div>
+              <div class="line"></div>
+              <div class="cafe-row"><span>솔커피숍</span><span>44</span></div>
+              <div class="cafe-row"><span>애정다방</span><span>50</span></div>
+              <div class="cafe-row"><span>을지다방</span><span>56</span></div>
+              <div class="cafe-row"><span>응접실다방</span><span>62</span></div>
+              <div class="cafe-row"><span>지원다방</span><span>68</span></div>
+              <div class="cafe-row"><span>한아름커피숍</span><span>402</span></div>
+            </div>
+            <!-- 대구 -->
+            <div class="list-col">
+              <div class="city-title">대구</div>
+              <div class="line"></div>
+              <div class="cafe-row"><span>미도다방</span><span>186</span></div>
+              <div class="cafe-row"><span>건영다방</span><span>192</span></div>
+              <div class="cafe-row"><span>시브로다방</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box2-image">
+        <img src="https://i.imgur.com/CNm8x3a.jpg" alt="이미지 설명">
+      </div>
+    </div>
+  </div>
+  <div class="horizontal-container">
+    <div class="box7">
+      <img src="https://i.imgur.com/zMmMsM9.png" alt="box1" width="110" height="110">
+    </div>
+  </div>
+</body>
+</html>
